@@ -8,7 +8,7 @@ const Showdata = () => {
   const [editingItemId, setEditingItemId] = useState(null);
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:7000/mens/${id}`);
+    await axios.delete(`https://xyz-wiet.onrender.com/mens/${id}`);
     getData();
   };
 
@@ -18,7 +18,7 @@ const Showdata = () => {
 
   const handleSave = async (id, updatedData) => {
     const updatedName = document.getElementById(`editInput-${id}`).value;
-    await axios.patch(`http://localhost:7000/mens/${id}`, {
+    await axios.patch(`https://xyz-wiet.onrender.com/mens/${id}`, {
       name: updatedName,
     });
     setEditingItemId(null);
@@ -30,7 +30,7 @@ const Showdata = () => {
   }, []);
 
   return (
-    <div>
+    <div className="md:w-[400px] w-full h-fit mx-auto mt-10">
       <>
         <div>Showdata</div>
         {data?.map((item, index) => (
