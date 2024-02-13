@@ -36,7 +36,6 @@ app.get('/mens', async (req, res) => {
 })
 
 
-
 // get data by ID
 app.get('/mens/:id', async (req, res) => {
     try {
